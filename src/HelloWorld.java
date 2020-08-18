@@ -8,7 +8,7 @@ public class HelloWorld {
         }
 
         System.out.println("Andre teller til femti");
-        for (int i=11; i<50; ++i) {
+        for (int i=11; i<=50; ++i) {
             System.out.println("Andre teller og sier " + i);
         }
     }
