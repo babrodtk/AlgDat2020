@@ -22,6 +22,7 @@ public class HashMap {
         strings[3] = "Test";
         strings[4] = "Hallo";
 
+        //Legg inn test-strenger i hashmap'et
         for (int i=0; i<strings.length; ++i) {
             int hash = hash(strings[i]);
             int hash_map_index = computeHashmapIndex(hash, hash_map_size);
@@ -29,10 +30,11 @@ public class HashMap {
             hash_map.get(hash_map_index).addFirst(strings[i]);
         }
 
-
-        int hash = hash("Test2");
+        //Søk etter en streng
+        String item = "Test";
+        int hash = hash(item);
         int hash_map_index = computeHashmapIndex(hash, hash_map_size);
-        System.out.println(hash_map.get(hash_map_index).toString());
+        System.out.println("Strengen " + item + " finnes i hashmap'et: " + hash_map.get(hash_map_index).contains(item));
     }
 
     static int computeHashmapIndex(int hash, int hash_map_size) {
